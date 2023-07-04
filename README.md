@@ -6,7 +6,7 @@
 
 GitHub Repository: https://github.com/maymyatnoehtet/NoSQLChallenge-Social_Network_API
 
-Video Link:
+Video Link: https://drive.google.com/file/d/1VdsGD7vBaGoKmgm6b5RlBpaJHWc07uZS/view?usp=sharing
 
 ## User Story
 
