@@ -1,8 +1,7 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
-const reactionSchema = require("./Reaction");
 
-const thoughtSchema = new Schema(
+const thoughtSchema = new mongoose.Schema(
   {
     thoughtText: {
       type: String,
@@ -19,7 +18,12 @@ const thoughtSchema = new Schema(
       type: String,
       require: true,
     },
-    reactions: [reactionSchema],
+    reactions: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Reaction",
+      },
+    ],
   },
   {
     toJSON: {
@@ -29,10 +33,9 @@ const thoughtSchema = new Schema(
   }
 );
 
-thoughtSchema.virtual("reactionCount").get(function () {
-  return this.reactions.length;
-});
+// thoughtSchema.virtual("reactionCount").get(function () {
+//   return this.reactions.length;
+// });
 
-const Thoughts = model("Thoughts", thoughtSchema);
-
-module.exports = Thoughts;
+const Thought = mongoose.model("Thought", thoughtSchema);
+module.exports = Thought;

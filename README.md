@@ -1,7 +1,15 @@
 # Module 18
+
 # No SQL Challenge: Social Network API
 
+## Links
+
+GitHub Repository: https://github.com/maymyatnoehtet/NoSQLChallenge-Social_Network_API
+
+Video Link:
+
 ## User Story
+
 ```
 AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
@@ -9,6 +17,7 @@ SO THAT my website can handle large amounts of unstructured data
 ```
 
 ## Acceptance Criteria
+
 ```
 GIVEN a social network API
 WHEN I enter the command to invoke the application
